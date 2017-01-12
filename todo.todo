@@ -1,0 +1,67 @@
+
+
+@TODO 
+Schema , 
+	id
+	-------
+	group
+	mobile
+	carrier
+
+@Todo 
+>> upon upload , 
+>> using uploaded mobile number , compose link that will insert mobile number in the system
+>> run curl with multi threading , using the list of url in the file
+
+
+#the magic sauce is xargs -P2 = where it creates 2 sub process that will churn the job
+
+$ seq 1 10 | xargs -n1 -P2 bash -c 'i=$0; url="http://example.com/?page${i}.html"; curl -O -s $url'
+
+curl -s https://www.mobilephonechecker.co.uk/guides/network-checker/07999991931 | grep "We've successfully matched"
+
+
+seq 1..10
+
+for seq 1..10;do
+	curl https://www.mobilephonechecker.co.uk/guides/network-checker/07999991931 -s &
+done
+
+@TODO - use this for input
+esign.mobilecarrierfinder.tk/api/create/[group]/[mobilenumber]
+esign.mobilecarrierfinder.tk/api/create/something/07321654987
+
+
+for url in `cat urls.txt`; do curl $url -s &>/dev/null done
+
+for url in `cat urls.txt`; do echo "wee" done
+
+for url in `seq 1 10`; do curl http://site8.co/ -s & done
+
+for url in `seq 1 10`; do echo $url -s & done
+
+echo "starting";
+`/usr/bin/bash test.sh &>/dev/null`;
+echo "done";
+for url in `cat urls.txt`; do curl $url -s & done
+
+shell_exec("for url in `cat urls.txt`; do curl $url -s &>/dev/null done");
+
+for url in `cat /home/site8/urls.txt`; do curl "$url" -s &>/dev/null done
+
+for url in "`cat /home/site8/urls.txt`"; do echo "$url" done
+
+cat urls.txt | xargs -n1 curl
+cat ur1.txt | xargs -n1 curl
+
+cat /home/site8/urls.txt | xargs curl
+
+cat /home/site8/urls.txt | xargs -n1 curl -s  &
+
+seq 1 100 | xargs -n1 curl -s http://site8.co/ &
+
+xargs -P3 -n 1 curl -O < /home/site8/urls.txt
+
+
+@TODO 
+use api  , to input the mobile numbers 
