@@ -61,7 +61,7 @@ class SiteController extends Controller
             $groupname = $uploadFormModel->rawFile->name;
             $groupname = explode('.', $groupname);
             $groupname = $groupname[0];
-            $groupName = preg_replace("/[^A-Za-z0-9]/", "", $groupName);            
+            $groupname = preg_replace("/[^A-Za-z0-9]/", "", $groupname);
             return $this->redirect(["/group/view/",'groupName'=>$groupname]);
         }
         return $this->render('index',compact('uploadFormModel'));
