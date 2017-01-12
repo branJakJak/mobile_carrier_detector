@@ -5,7 +5,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
 
-$this->title = 'My Yii Application';
+$this->title = \Yii::$app->name.' - Upload';
 ?>
 <div class="row">
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
