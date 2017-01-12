@@ -2,5 +2,5 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'urlTemplate' => 'localhost:8080/api/create/%s/%s',
+    'urlTemplate' => 'mobilecarrier.site8.co/api/create/%s/%s',
 ];
