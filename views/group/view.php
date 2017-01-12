@@ -3,7 +3,7 @@
 /* @var $dataProvider \yii\data\ActiveDataProvider */
 use yii\grid\GridView;
 use yii\helpers\Html;
-
+$this->title = \Yii::$app->params['site_title'].' - Group '.$groupName;
 ?>
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

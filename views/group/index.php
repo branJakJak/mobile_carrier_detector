@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 use yii\grid\GridView;
 use yii\helpers\Html;
+$this->title = \Yii::$app->params['site_title'].' - Group';
 ?>
 <div class="row">
 	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">

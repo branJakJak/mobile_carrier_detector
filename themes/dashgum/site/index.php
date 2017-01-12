@@ -5,7 +5,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Upload Mobile Numbers';
+$this->title = \Yii::$app->params['site_title'].' - Upload Mobile Numbers';
 ?>
 <div class="site-index">
 
