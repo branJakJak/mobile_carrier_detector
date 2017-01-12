@@ -13,14 +13,6 @@ $config = [
         'carrierFinder'=>[
             'class'=>RemoteCarrierFinder::className()
         ],
-        // 'view' => [
-        //     'theme' => [
-        //         'pathMap' => [
-        //             'class' => \yii\base\Theme::className(),
-        //             '@app/views' => '@app/themes/dashgum'
-        //          ],
-        //      ],
-        // ],
         'request' => [
             'cookieValidationKey' => 'GH45A2NJ48Ax34eqQ3945G2XP0W4vH95',
         ],
@@ -36,9 +28,6 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
         'log' => [
@@ -57,6 +46,7 @@ $config = [
             'rules' => array(
                 '/api/create/<groupName:\w+>/<mobileNumber:\d+>' => '/api/create',
                 '/group/<groupName:\w+>' => '/group/view',
+                '/group/download/<groupName:\w+>' => '/group/download',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',

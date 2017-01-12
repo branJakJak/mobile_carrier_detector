@@ -58,7 +58,11 @@ class SiteController extends Controller
             $outputfile = $uploadFormModel->save();
             $uploadFormModel->on(UploadMobileNumbersForm::NEW_MOBILE_UPLOAD, [new MobileDataRemoteUploadEventHandler(), 'handle'], $outputfile);
             $uploadFormModel->trigger(UploadMobileNumbersForm::NEW_MOBILE_UPLOAD);
-            return $this->redirect("/group/".$uploadFormModel->rawFile->name);
+            $groupname = $uploadFormModel->rawFile->name;
+            $groupname = explode('.', $groupname);
+            $groupname = $groupname[0];
+            $groupName = str_replace(" ", "_", $groupName);            
+            return $this->redirect(["/group/view/",'groupName'=>$groupname]);
         }
         return $this->render('index',compact('uploadFormModel'));
     }

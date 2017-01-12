@@ -2,7 +2,7 @@
 
 $dbConf = [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    'dsn' => 'mysql:host=localhost;dbname=mobile_carrier_detector',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

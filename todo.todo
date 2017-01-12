@@ -65,3 +65,7 @@ xargs -P3 -n 1 curl -O < /home/site8/urls.txt
 
 @TODO 
 use api  , to input the mobile numbers 
+@DONE
+
+@TODO 
+testing

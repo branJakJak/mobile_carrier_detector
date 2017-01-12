@@ -38,6 +38,9 @@ class UploadMobileNumbersForm extends Model{
     public function save()
     {
         $groupName = $this->rawFile->name;
+        $groupName = explode('.', $groupName);
+        $groupName = $groupName[0];
+        $groupName = str_replace(" ", "_", $groupName);
         /*create outputfile*/
         $outputFile = \Yii::getAlias("@app/uploaded/") . $groupName . '-' . uniqid() . '.'.$this->rawFile->extension;
         $uploadedFileRes = fopen($this->rawFile->tempName, 'r+');
