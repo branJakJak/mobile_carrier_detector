@@ -18,7 +18,7 @@ class MobileDataRemoteUploadEventHandler {
      */
     public function handle($event){
         $fileoutput = $event->data;
-        shell_exec("cat $fileoutput | xargs -n1 curl -s  &");
+        shell_exec("cat $fileoutput | xargs -n1 curl -s  > /dev/null 2>&1 &");
         return true;
     }
 }
